@@ -7,4 +7,4 @@ for s in word:
         L=L+1
     else:
         pass
-print("Letters",L,"\ndigists",D)
+print("Letters =",L,"\nDigists =",D)
