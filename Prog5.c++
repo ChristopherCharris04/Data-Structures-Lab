@@ -17,6 +17,13 @@ void pop() {
       top--;
    }
 }
+void peek() {
+   if(top<=-1)
+   cout<<"Stack Underflow"<<endl;
+   else {
+      cout<<"The peek element is "<< stack[top] <<endl;
+   }
+}
 void display() {
    if(top>=0) {
       cout<<"Stack elements are:";
@@ -31,7 +38,8 @@ int main() {
    cout<<"1) Push in stack"<<endl;
    cout<<"2) Pop from stack"<<endl;
    cout<<"3) Display stack"<<endl;
-   cout<<"4) Exit"<<endl;
+   cout<<"4) Peek value"<<endl;
+   cout<<"5) Exit"<<endl;
    do {
       cout<<"Enter choice: "<<endl;
       cin>>ch;
@@ -51,6 +59,10 @@ int main() {
             break;
          }
          case 4: {
+            peek();
+            break;
+         }
+         case 5: {
             cout<<"Exit"<<endl;
             break;
          }
@@ -58,6 +70,6 @@ int main() {
             cout<<"Invalid Choice"<<endl;
          }
       }
-   }while(ch!=4);
+   }while(ch!=5);
    return 0;
 }
